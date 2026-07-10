@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "karaoke-maker"
+version = "0.1.0"
+description = "Generate plain-background karaoke videos from authorized YouTube audio."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "demucs>=4.0.1",
+  "pydantic>=1.10",
+  "typer>=0.12",
+  "whisperx>=3.3.0",
+  "yt-dlp>=2025.1.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4",
+]
+
+[project.scripts]
+karaoke-maker = "karaoke_maker.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

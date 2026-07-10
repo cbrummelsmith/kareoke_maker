@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.eggs/
+
+# Generated media and model outputs
+runs/
+outputs/
+*.mp3
+*.m4a
+*.mp4
+*.wav
+*.flac
+*.aac
+*.webm
+*.mkv
+*.ass
+*.srt
+
+# ML/model caches that may be created locally
+models/
+.cache/
+whisperx/
+demucs/
